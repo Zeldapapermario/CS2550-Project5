@@ -1,0 +1,278 @@
+<!--  
+ 
+Project:  Project 5
+Name: Kyle Allred
+Submitted: 12/2/24
+ 
+I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that  If I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class.
+ 
+Reflection (1-2 paragraphs):  I learned more about Javascript than I did before. There was a moment where I kept getting an error message at a certain point in the code. 
+In the checkRequired function I kept a null value when I used document.getElementById(id). I thought it was some issue with that function but I eventually discovered it
+was an issue with how I added the error message in the setElementValidity function.
+ 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>About Kyle Allred</title>
+   <link rel="stylesheet" href="css/stylesheet.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <h1>Kyle Allred</h1>
+   <img id="myImg" src="img/picture_of_me_cropped.png" alt="Picture of me">
+
+   <!-- The Modal -->
+   <div id="myModal" class="modal">
+      <div class="modal-content">
+         <button class="close">&times;</button>
+         <img id="img01">
+         <div id="caption"></div>
+      </div>
+   </div>
+
+   <div  class="formContainer">
+      <h2>Visitor Form</h2>
+      <div id="success" class="successMsg" style="display: none">Thank you for submitting your information!</div>
+      <form id="myForm" novalidate method="GET" action="" >
+         <ul>
+            <li>
+               <label for="firstName">First Name</label>
+               <input type="text" id="firstName" name="firstName" placeholder="Ex: John">
+               <div class="errorMsg"></div>
+            </li>
+            <li>
+               <label for="lastName">Last Name</label>
+               <input type="text" id="lastName" name="lastName" placeholder="Ex: Smith">
+               <div class="errorMsg"></div>
+            </li>
+            <li>
+               <label for="streetAddress">Address</label>
+               <input type="text" id="streetAddress" name="streetAddress" placeholder="Ex: 200 N 400 W">
+               <div class="errorMsg"></div>
+            </li>
+            <li>
+               <label for="city">City</label>
+               <input type="text" id="city" name="city" placeholder="Ex: Los Angeles">
+               <div class="errorMsg"></div>
+            </li>
+            <li>
+               <label for="state">State</label>
+               <input type="text" id="state" name="state" placeholder="Ex: California">
+               <div class="errorMsg"></div>
+            </li>
+            <li>
+               <label for="zipcode">Zip</label>
+               <input type="text" id="zipcode" name="zipcode" placeholder="Ex: 84003">
+               <div class="errorMsg"></div>
+            </li>
+            <li>
+               <label for="email">Email</label>
+               <input type="text" id="email" name="email" placeholder="Ex: john@gmail.com">
+               <div class="errorMsg"></div>
+            </li>
+            <li>
+               <label for="phone">Phone</label>
+               <input type="text" id="phone" name="phone" placeholder="Ex: 555-555-5555">
+               <div class="errorMsg"></div>
+            </li>
+            <li>
+               <h2>How did you find my page</h2>
+            </li>
+            <li>
+               <input type="checkbox" id="google" name="findPage" value="google">
+               <label for="google">Google Search</label>
+            </li>
+            <li>
+               <input type="checkbox" id="friend" name="findPage" value="friend">
+               <label for="friend">Friend</label>
+            </li>
+            <li>
+               <input type="checkbox" id="ad" name="findPage" value="ad">
+               <label for="ad">Ad</label>
+               <div class="errorMsg"></div>
+            </li>
+            <li>
+               <button type="submit" id="submit">Submit</button>
+            </li>
+         </ul>
+      </form>
+   </div>
+
+   <h2>Personal Info</h2>
+   <ul>
+      <li><b>Major:</b> Computer Science with a focus on Full Stack Web Development</li>
+      <li><b>High School:</b>  Karl G. Maeser Prepatory Academy, 2014</li>
+      <li><b>Current Year at UVU:</b>  Sophomore I guess</li>
+      <li><b>Favorite Ice Cream:</b>  Salted Caramel</li>
+   </ul>
+
+   <h2>My Five Favorite Books</h2>
+   <ol>
+      <li><i>The Way of Kings</i> by <a target="_blank" href="https://www.brandonsanderson.com/">Brandon Sanderson</a></li>
+      <li><i>Mistborn</i> by <a target="_blank" href="https://www.brandonsanderson.com/">Brandon Sanderson</a></li>
+      <li><i>The Hobbit</i> by <a target="_blank" href="https://www.tolkienestate.com/">J. R. R. Tolkien</a></li>
+      <li><i>Night Broken</i> by <a target="_blank" href="https://www.patriciabriggs.com/">by Patricia Briggs</a></li>
+      <li><i>Throne of Glass</i> by <a target="_blank" href="https://sarahjmaas.com/">Sarah J. Maas</a>
+   </ol>
+
+   <h2>A Haiku About the Joys of Reading</h2>
+   <p>I wrote this Haiku to express my love for reading</p>
+   <p class="haiku">Books are fun to read<br>They bring lots of joy to me<br>Stories are just great</p>
+   
+   <h2>My Personal Interests</h2>
+   <p>I really love to snowboard in the Winter. I learned how to snowboard when I was 10 years old and I've loved it ever since. 
+      I have three older brothers who also snowboard so they were able to teach me and help me get better. I really enjoy going fast down the mountain and manoeuvring through the trees when there is a lot of powder.
+   </p>
+   <p>Video Games are one of my other favorite interests. I like to play video games with friends because it's a nice way to socialize and build relationships.
+      The best part about it is that we can play together whenever we want. I have friends who live outside of Utah, but I'm still able to stay connected with them by playing video games online.
+   </p>
+   <p>
+      As you can tell from my Haiku above, I also like to read. My favorite genres are sci-fi and fantasy. It's always nice to settle down with a good book for a couple hours
+      that will take you away to another world.
+   </p>
+
+   <h2>Work Schedule</h2>
+   <p>All of my classes are online so I don't have any classes that I attend at a scheduled time. I used my work schedule instead.</p>
+   <table class="work-schedule">
+      <tr>
+         <th class="headers th-headers"></th>
+         <th class="headers th-headers">Monday</th>
+         <th class="headers th-headers">Tuesday</th>
+         <th class="headers th-headers">Wednesday</th>
+         <th class="headers th-headers">Thursday</th>
+         <th class="headers th-headers">Friday</th>
+      </tr>
+      <tr>
+         <td  class="headers">7:00</td>
+         <td class="wake">Wake up</td>
+         <td class="wake">Wake up</td>
+         <td class="wake">Wake up</td>
+         <td class="wake">Wake up</td>
+         <td class="wake">Wake up</td>
+      </tr>
+      <tr>
+         <td  class="headers">7:30</td>
+         <td class="breakfast">Eat Breakfast</td>
+         <td class="breakfast">Eat Breakfast</td>
+         <td class="breakfast">Eat Breakfast</td>
+         <td class="breakfast">Eat Breakfast</td>
+         <td class="breakfast">Eat Breakfast</td>
+      </tr>
+      <tr>
+         <td class="headers">8:00</td>
+         <td class="ready">Get ready for Work</td>
+         <td class="ready">Get ready for Work</td>
+         <td class="ready">Get ready for Work</td>
+         <td class="ready">Get ready for Work</td>
+         <td class="ready">Get ready for Work</td>
+      </tr>      
+      <tr>
+         <td  class="headers">8:30</td>
+         <td rowspan ="8" class="work">Work</td>
+         <td rowspan ="8" class="work">Work</td>
+         <td rowspan ="8" class="work">Work</td>
+         <td rowspan ="8" class="work">Work</td>
+         <td rowspan ="8" class="work">Work</td>
+      </tr>
+      <tr>
+         <td class="headers">9:00</td>
+      </tr>
+      <tr>
+         <td class="headers">9:30</td>
+      </tr>
+      <tr>
+         <td class="headers">10:00</td>
+      </tr>
+      <tr>
+         <td class="headers">10:30</td>
+      </tr>
+      <tr>
+         <td class="headers">11:00</td>
+      </tr>
+      <tr>
+         <td class="headers">11:30</td>
+      </tr>
+      <tr>
+         <td class="headers">12:00</td>
+      </tr>
+      <tr>
+         <td class="headers">12:30</td>
+         <td class="lunch">Lunch</td>
+         <td class="lunch">Lunch</td>
+         <td class="lunch">Lunch</td>
+         <td class="lunch">Lunch</td>
+         <td class="lunch">Lunch</td>
+      </tr>
+      <tr>
+         <td class="headers">1:00</td>
+         <td rowspan ="10" class="work">Work</td>
+         <td rowspan ="10" class="work">Work</td>
+         <td rowspan ="10" class="work">Work</td>
+         <td rowspan ="10" class="work">Work</td>
+         <td rowspan ="4" class="work">Work</td>
+      </tr>
+      <tr>
+         <td class="headers">1:30</td>
+      </tr>
+      <tr>
+         <td class="headers">2:00</td>
+      </tr>
+      <tr>
+         <td class="headers">2:30</td>
+      </tr>
+      <tr>
+         <td class="headers">3:00</td>
+         <td rowspan ="9" class="free">Free Time / Do Homework</td>
+      </tr>
+      <tr>
+         <td class="headers">3:30</td>
+      </tr>
+      <tr>
+         <td class="headers">4:00</td>
+      </tr>
+      <tr>
+         <td class="headers">4:30</td>
+      </tr>
+      <tr>
+         <td class="headers">5:00</td>
+      </tr>
+      <tr>
+         <td class="headers">5:30</td>
+      </tr>
+      <tr>
+         <td class="headers">6:00</td>
+         <td rowspan ="3" class="free">Free Time / Do Homework</td>
+         <td rowspan ="3" class="free">Free Time / Do Homework</td>
+         <td rowspan ="3" class="free">Free Time / Do Homework</td>
+         <td rowspan ="3" class="free">Free Time / Do Homework</td>
+      </tr>
+      <tr>
+         <td class="headers">6:30</td>
+      </tr>
+      <tr>
+         <td class="headers">7:00</td>
+      </tr>
+      <tr>
+         <td class="headers">7:00</td>
+         <td class="wake">Dinner</td>
+         <td class="wake">Dinner</td>
+         <td class="wake">Dinner</td>
+         <td class="wake">Dinner</td>
+         <td class="wake">Dinner</td>
+      </tr>
+   </table>
+<script defer type="text/javascript" src="js/validate.js"></script>
+<script defer type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
