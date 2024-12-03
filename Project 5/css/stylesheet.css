@@ -1,0 +1,236 @@
+/*    
+ 
+Project:  Project 5
+Name: Kyle Allred
+Submitted: 12/2/24
+ 
+I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that  If I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class.
+ 
+Reflection (1-2 paragraphs):  I learned more about Javascript than I did before. There was a moment where I kept getting an error message at a certain point in the code. 
+In the checkRequired function I kept a null value when I used document.getElementById(id). I thought it was some issue with that function but I eventually discovered it
+was an issue with how I added the error message in the setElementValidity function.
+ 
+*/
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12pt;
+    margin: 100px;    
+    background-image: url("../img/background.webp");
+    background-repeat: repeat;
+}
+
+.errorMsg {
+    color: red;
+}
+
+input.wasValidated:invalid {
+    color: red;
+    border: 1px solid red;
+}
+
+input.wasValidated:invalid ~ div {
+    display: block;
+}
+
+input:valid ~ div {
+    display: none;
+}
+
+input:invalid ~ div {
+    display: none;
+}
+
+#myForm > ul {
+    list-style-type: none;
+}
+
+@font-face {
+    font-family: "Golos Text", sans-serif;
+    src: url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap");
+}
+
+.name {
+    font-size: 30pt;
+    text-decoration: underline;
+    background-image: linear-gradient(yellow, orange);
+}
+
+h1 {
+    margin-top: 24pt;
+    margin-bottom: 3pt;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50pt;
+    background-color: white;
+    padding: 15px;
+    border: 3px solid brown;
+}
+
+h2 {
+    margin-top: 20pt;
+    margin-bottom: 3pt;
+}
+
+a {
+    text-decoration: none;
+}
+
+ a:hover {
+    text-decoration: underline;
+}
+
+img {
+    float: right;
+    margin: 15px;
+    box-shadow: 5px 5px 5px 5px #aaaaaa;
+    border: 2px solid brown;
+    border-radius: 25px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-spacing: 3px;
+    padding: 3px;
+}
+
+table {
+    table-layout: fixed;
+    width: 800px;
+    border: 5px solid black;
+}
+
+th, td {
+    width: 120px;
+    text-align: left;
+    vertical-align: text-top;
+}
+
+.headers {
+    color: brown;
+    background-color: wheat;
+    font-weight: bold;
+}
+
+.th-headers {
+    width: 175px;
+}
+
+.work {
+    background-color: #EF8F74;
+}
+
+.free {
+    background-color: #EFCC74;
+}
+
+.lunch {
+    background-color: #EF7497;
+}
+
+.wake {
+    background-color: #E64D23;
+}
+
+.breakfast {
+    background-color: #E6AF23;
+}
+
+.ready {
+    background-color: #E6235B;
+}
+
+.haiku {
+    text-align: center;
+}
+
+.work-schedule {
+    table-layout: fixed;
+    width: 700px;
+}
+
+
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 50%;
+    max-width: 500px;
+  }
+  
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 50%;
+    max-width: 500px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation */
+  .modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    margin: 20px 20px 20px 30px;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
